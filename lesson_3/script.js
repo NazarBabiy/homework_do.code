@@ -10,16 +10,15 @@ function arr_change() {
     // Перевіряє на унікальність елементів
     let arr = Array.from(new Set(arr_sum));
 
-    let result =[]
+    let result = []
 
-    // Перетворює елементи: всі букви великі значення та пишуться заду на перед
+    // Перетворює елементи: всі букви великі значення та пишуться ззаду на перед
     for (let i = 0; i<arr.length; i++){
-
-          result.push(String(arr[i]).split("").reverse().join("").toUpperCase())
+      result.push(String(arr[i]).split("").reverse().join("").toUpperCase())
     }
 
     // Останнє переворення з Array у String та сполученням
-     return  finish = result.join(' - ')
+    return  finish = result.join(' - ')
 
 }
 
