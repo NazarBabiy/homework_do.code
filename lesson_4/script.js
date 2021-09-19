@@ -1,47 +1,78 @@
-const name_pizza =["Paperoni","Hawaiian","Five cheese",'Carbonara','Tuscany']
-const size = {"small":1, 
-            "middle":1.3, 
-            "big":1.4}
-const tupe_dough =["thin", "standart"]
-const price_small_pizza = {'Paperoni': 130,
-                        'Hawaiian': 115,
-                        'Five cheese': 121,
-                        'Carbonara': 135,
-                        'Tuscany': 118,
-}
+const obj_pizza = {};
+let order = [];
 
-const obj = {}
-
-let br_str = (a) => { 
-  while (typeof a !== "string") {
-  break    
- }
- return true
-}
-
-let price_pizza = (pizza,size,price) =>{
-
-  let your_pizza = prompt ("Choose pizza: ",)
-  if(br_str(your_pizza)){
-    obj.yourPizza = your_pizza
-  }
-  
-  let size_pizza = prompt ("Choose pizza size: ",) 
-  if (br_str(size_pizza)){
-    obj.sizeYourPizza = size_pizza
+class Order {
+  constructor(pizza, size, dought, price) {
+    this.pizza = pizza;
+    this.size = size;
+    this.dought = dought;
+    this.price = price;
   }
 
-  if(pizza.includes(your_pizza)) {
-    if(size[size_pizza] !== undefined){
-      return price[your_pizza] * size[size_pizza] 
-    }  
+  getOrder() {
+    return `<b>Pizza:</b> ${this.pizza}, <b>Size:</b> ${this.size}, <b>Dought:</b> ${this.dought}, <b>Price:</b> ${this.price} `;
   }
+
 }
 
-obj.priseYourPizza = price_pizza(name_pizza,size,price_small_pizza);
-let your_tupe_dought = prompt("Choose dought: ",)
-if (br_str(your_tupe_dought)) {
-    obj.yourTupeDought = your_tupe_dought
+function add() {
+  let your_pizza = document.getElementById('pizza').value;
+  let size_pizza = document.getElementById('size').value;
+  let dought = document.getElementById('type_dought').value;
+
+  switch (your_pizza) {
+    case "Paperoni":
+      price_pizza = 130
+      break;
+    case "Hawaiia":
+      price_pizza = 115
+      break;
+    case "Five cheese":
+      price_pizza = 121
+      break;
+    case "Carbonara":
+      price_pizza = 135
+      break;
+    case "Tuscany":
+      price_pizza = 118
+      break;
+    default:
+      price_pizza = 100;
+  }
+  switch (size_pizza) {
+    case "small":
+      size = 1
+      break;
+    case "normal":
+      size = 1.3
+      break;
+    case "big":
+      size = 1.4
+      break;
+    default:
+      size = 1
+  }
+
+  const price = price_pizza * size;
+  let p = new Order(your_pizza, size_pizza, dought, price);
+  order.push(p);
+  showOrder();
 }
 
-console.log(obj);
+function showOrder() {
+  let res = document.getElementById('result');
+  res.innerHTML = '';
+  final_price = 0;
+  order.forEach((e, i) => {
+    res.innerHTML += (i + 1) + ". " + e.getOrder();
+    res.innerHTML += "</br>";
+    final_price += e.price;
+  });
+  res.innerHTML += `<b>Sum:</b> ${final_price} `;
+}
+
+
+function clearOder() {
+  order = [];
+  showOrder();
+}

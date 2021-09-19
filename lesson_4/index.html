@@ -1,9 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title> Document </title>
-        <script src="script.js"></script>
-    </head>
-    <body>
-    </body>
+<html>
+
+<head>
+  <title> Document </title>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <select id="pizza" name="pizza">
+    <option value="Paperoni">Paperoni</option>
+    <option value="Hawaiia">Hawaiia</option>
+    <option value="Five cheese">Five cheese</option>
+    <option value="Carbonara">Carbonara</option>
+    <option value="Tuscany">Tuscany</option>
+  </select>
+  <select id="size" name="size">
+    <option value="small">small</option>
+    <option value="normal">normal</option>
+    <option value="big">big</option>
+  </select>
+  <select id="type_dought" name="type_dought">
+    <option value="thin">thin</option>
+    <option value="standart">standart</option>
+  </select>
+  <p>
+    <button id="add" onclick="add()">Додати в корзину</button>
+    <button id="clean" onclick="clearOder()">Очистити</button>
+  </p>
+
+  <div id="result"></div>
+</body>
+
 </html>
