@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+div{
+    padding-left: 48px ;
+}
+header{
+    background-color:  #8E44AD;
+    height: 77px ;
+    display: flex;
+    align-items: center;
+    padding-left: 48px ;
+}
+footer{
+ 
+    margin-top: 947px;
+    border-radius: 0px;
+    
+
+    background-color:  #8E44AD;
+    height: 77px ;
+    display: flex;
+    align-items: center;
+    padding-left: 48px ;
+}
+h1{
+    font-size: 24px;
+    color: white;
+}
+img{
+    margin-left: 10px;
+    height: 32px;
+    width: 30px;
+    border-radius: 0px;
+    color: #8E44AD;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 116px;
+    max-height: 66px;
+}
+
+button{
+    background: #9B59B6;
+    border: 1px solid #3498DB;
+    border-radius: 5px;
+    align-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    height: 33px;
+    width: 116px;
+    align-content: center;
+    color: white;
+    
+}
+hr{
+    border: 1px solid #BDC3C7;
+    height: 0px;
+    width: 344px;
+    margin-top: 20px;
+    margin-left: 48px;
+    border-radius: nullpx;
+
+}
+
+/* user and input */
+#container_1{
+    padding-top: 70px;
+
+}
+#user{
+    font-size: 18px;
+    font-weight: 500px;
+}
+#number_id{
+    height: 33px ;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    padding-left: 7px;
+    margin-top: 15px;
+    font-size: 18px ;
+}
+
+/* result */
+
+.text{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 13px;
+    height: 21px ;
+    width: 50px;
+}
+.res{
+    height: 20px ;
+    width: 242px;
+    padding-left: 0px;
+    font-size: 18px ;
+
+}
+.res_text{
+    padding-top: 13px;
+}
+
+#container_2{
+    margin-top: 20px;
+    padding-left: 0;
+    display: flex;
+    width: 346px;
+}
+
+/* save */
+#container_3{
+    margin-top: 29.5px;
+}
+#save{
+    margin-top: 16px;
+
+}
+
+
+/* button */
+#but_save{
+    margin-top: 20px;
+    padding-left: 278px;
+}
+#but_bas{
+    margin-top: 20px ;
+}
+#delete{
+    background: black;
+    border: 0px;
+    border-radius: 5px;
+    height: 33px;
+    width: 33px;
+    align-content: center;
+    color: white;
+    margin-left: 10px;
+
+}
+
+
+
+
+

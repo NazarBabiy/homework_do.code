@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Document </title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+
+<body>
+    <header>
+        <h1>Users API</h1>
+        <img src="user.png" alt="icon">
+    </header>
+    <div id="container_1">
+        <form>
+            <span class="text">user:</span>
+            <input type="number" min="0" max="10" id="number_id" name="ID">
+        </form>
+    </div>
+    <div id="but_bas">
+        <button id="Get" onclick="result()"> Get </button>
+    </div>
+    <hr>
+    <div id="container_2">
+        <div class="res_text1">
+            <span class="text">name:<br></span><br>
+            <span class="text">email:<br></span><br>
+            <span class="text">phone:<br></span><br>
+        </div>
+        <div class="res_text1">
+            <div class="res" id="name"></div><br>
+            <div class="res" id="email"></div><br>
+            <div class="res" id="phone"></div><br>
+        </div>
+    </div>
+    <div id="but_save">
+        <button onclick="Save()">Save</button>
+    </div>
+    <hr>
+    <div id="container_3">
+        <span class="text">Saved:<br></span>
+        <div id="save"></div>
+        <div id="res"></div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
