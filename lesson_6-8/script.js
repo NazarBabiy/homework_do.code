@@ -9,14 +9,27 @@ async function Get(ID) {
 
 async function result() {
   let ID = document.getElementById('number_id').value;
+  let btn = document.getElementById('Get');
+  btn.style.backgroundColor = 'grey' 
+  btn.innerHTML = 'Loading...' 
   let data = await Get(ID);
   const name = data.name
   const email = data.email
   const phone = data.phone;
-  document.getElementById("name").innerHTML = `${name}`;
-  document.getElementById("email").innerHTML = `${email}`;
-  document.getElementById("phone").innerHTML = `${phone}`;
-  localStorage(ID, name)
+
+  // Дані існують?
+  if (name !== undefined){ 
+    document.getElementById("name").innerHTML = `${name}`;
+    document.getElementById("email").innerHTML = `${email}`;
+    document.getElementById("phone").innerHTML = `${phone}`;
+    localStorage(ID, name)
+    btn.style.backgroundColor = '#9B59B6' 
+    btn.innerHTML = 'Get' 
+  }else{
+    btn.style.backgroundColor = 'grey' 
+    btn.innerHTML = 'Get'
+  }
+
 }
 
 
@@ -25,7 +38,7 @@ function Save() {
   res.innerHTML ='';
   arr.forEach((e, i) => {
     res.innerHTML += `${e}`;
-    res.innerHTML += "<button id='delete' type='action' onclick='deleteTex(" + i + ")'>X</button>"
+    res.innerHTML += "<img src='delete.png' onclick='deleteTex(" + i + ")'>"
     res.innerHTML += "</br>";
   });
 }
@@ -41,6 +54,3 @@ function deleteTex(i) {
 }
 
 
-// function change_Button(){
-
-// }

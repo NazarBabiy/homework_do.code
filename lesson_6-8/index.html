@@ -15,13 +15,13 @@
     <div id="container_1">
         <form>
             <span class="text">user:</span>
-            <input type="number" min="0" max="10" id="number_id" name="ID">
+            <input type="number" min="1" max="10" id="number_id" name="ID">
         </form>
     </div>
     <div id="but_bas">
-        <button id="Get" onclick="result()"> Get </button>
+        <button id="Get" class="but" onclick="result()"> Get </button>
     </div>
-    <hr>
+    <hr id="hr_1">
     <div id="container_2">
         <div class="res_text1">
             <span class="text">name:<br></span><br>
@@ -37,7 +37,7 @@
     <div id="but_save">
         <button onclick="Save()">Save</button>
     </div>
-    <hr>
+    <hr id="hr_2">
     <div id="container_3">
         <span class="text">Saved:<br></span>
         <div id="save"></div>
