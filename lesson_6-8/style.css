@@ -5,6 +5,12 @@
     font-family: 'Roboto', sans-serif;
     
 }
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+
+}
 div{
     padding-left: 48px ;
 }
@@ -13,19 +19,20 @@ header{
     height: 77px ;
     display: flex;
     align-items: center;
-    padding-left: 48px ;
+    padding-left: 48px;
+    max-width: 100%;
+    
+}
+main{
+    flex: 1 1 auto;
 }
 footer{
- 
-    margin-top: 947px;
+    flex: 0 0 auto;
     border-radius: 0px;
-    
-
     background-color:  #8E44AD;
     height: 77px ;
     display: flex;
-    align-items: center;
-    padding-left: 48px ;
+    margin-top: 100vh;
 }
 h1{
     font-size: 24px;
@@ -100,7 +107,7 @@ hr{
     height: 21px ;
     width: 50px;
 }
-.res{
+#res{
     height: 20px ;
     width: 242px;
     padding-left: 0px;
@@ -109,6 +116,12 @@ hr{
 }
 .res_text{
     padding-top: 13px;
+}
+.user_list{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+
 }
 
 #container_2{
@@ -138,6 +151,11 @@ hr{
 }
 #but_bas{
     margin-top: 23px ;
+}
+
+#delete_1{
+    max-width: 10px;
+    margin-top: 3px;
 }
 
 

@@ -8,8 +8,14 @@ async function Get(ID) {
 }
 
 async function result() {
+  let newID = document.getElementById('number_id')
   let ID = document.getElementById('number_id').value;
   let btn = document.getElementById('Get');
+
+  newID.addEventListener("click", () => {
+    btn.style.backgroundColor = '#9B59B6' 
+  });
+
   btn.style.backgroundColor = 'grey' 
   btn.innerHTML = 'Loading...' 
   let data = await Get(ID);
@@ -37,14 +43,13 @@ function Save() {
   let res = document.getElementById('res');
   res.innerHTML ='';
   arr.forEach((e, i) => {
-    res.innerHTML += `${e}`;
-    res.innerHTML += "<img src='delete.png' onclick='deleteTex(" + i + ")'>"
+    res.innerHTML += `<div class='user_list'>${i+1}. ${e} <img src='delete.svg' id='delete_1' onclick='deleteTex(" + i + ")'></div>`;
     res.innerHTML += "</br>";
   });
 }
 
 function localStorage(id, name) {
-  let a = `${id}. ${name}`
+  let a = `${name}`
   arr.push(a);
 }
 
